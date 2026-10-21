@@ -5,7 +5,6 @@ def build_model():
 
     df = pd.read_csv('houses.csv')
 
-    # Nettoyage : on enlève les lignes avec un prix négatif (erreurs dans les données)
     df = df[df['price'] > 0]
 
     X = df[['size', 'nb_rooms', 'garden']]

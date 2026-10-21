@@ -1,10 +1,11 @@
+import sys
 import requests
 
-# Test GET
-response = requests.get("http://127.0.0.1:8000/predict")
+URL = sys.argv[1] if len(sys.argv) > 1 else "http://127.0.0.1:8000"
+
+response = requests.get(f"{URL}/predict")
 print("GET:", response.status_code, response.json())
 
-# Test POST
 data = {"size": 100, "nb_rooms": 3, "garden": 1}
-response = requests.post("http://127.0.0.1:8000/predict", json=data)
+response = requests.post(f"{URL}/predict", json=data)
 print("POST:", response.status_code, response.json())
