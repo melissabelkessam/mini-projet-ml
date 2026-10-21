@@ -1,5 +1,8 @@
-fastapi
-uvicorn
-joblib
-pandas
-scikit-learn==1.9.1
+fastapi        #→ pour créer l'API
+uvicorn       # → le serveur qui fait tourner l'API
+joblib        # → pour sauvegarder / charger le modèle
+pandas        # → pour lire le CSV et manipuler les tableaux
+scikit-learn==1.9.1 #→ la bibliothèque de Machine Learning (LinearRegression)
+
+
+
